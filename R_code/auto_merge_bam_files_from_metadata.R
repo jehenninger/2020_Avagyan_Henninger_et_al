@@ -1,5 +1,5 @@
 ## Paths to define
-md_fname <- "/Users/jon/zon/clonal_hematopoiesis/204590r_2019_11_20/MGH_sample_key_204590.xlsx"
+md_fname <- "/Users/jon/zon/clonal_hematopoiesis/sequencing_analysis/213385r_2020_12_30/MGH_sample_key_213385.xlsx"
 samtools_path <- "/usr/local/bin/samtools"
 
 # Script beginning

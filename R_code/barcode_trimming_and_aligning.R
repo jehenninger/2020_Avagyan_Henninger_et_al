@@ -1,24 +1,24 @@
 #for CRISPR variants script
-library(Rsamtools)
-library(CrispRVariants)
-library(Biostrings)
-library(xlsx)
-library(tools)
-library(tcltk)
-library(plyr)
-library(reshape2)
-library(ggrepel)
+# library(Rsamtools)
+# library(CrispRVariants)
+# library(Biostrings)
+# library(xlsx)
+# library(tools)
+# library(tcltk)
+# library(plyr)
+# library(reshape2)
+# library(ggrepel)
 
 ## Paths to define before running script
 
 # Path to metadata Excel file
-md_fname <- "/Users/jon/zon/clonal_hematopoiesis/204590r_2019_11_20/MGH_sample_key_204590.xlsx"
+md_fname <- "/Users/jon/zon/clonal_hematopoiesis/sequencing_analysis/213385r_2020_12_30/MGH_sample_key_213385.xlsx"
 
 # Path to file with barcodes
 barcode_fw_fasta_file <- "/Users/jon/zon/clonal_hematopoiesis/barcode_fasta/barcode_ppm1d_fw.fasta"
 
 # Path to custom genome file
-genome_file <- "/Users/jon/zon/clonal_hematopoiesis/Jon-31/Jon-31.fa"
+genome_file <- "/Users/jon/zon/clonal_hematopoiesis/Jon-33/Jon-33.fa"
 
 # Path to cutadapt installation
 cutadapt_path = "/Users/jon/Library/Python/3.7/bin/cutadapt"

@@ -1,7 +1,7 @@
 ## Paths to define
-parent_dir <- "/Users/jon/zon/clonal_hematopoiesis/204590r_2019_11_20"
-genome_file_path <- "/Users/jon/zon/clonal_hematopoiesis/Jon-31/Jon-31.fa"
-genome_target_file_path <- "/Users/jon/zon/clonal_hematopoiesis/Jon-31/R_custom_genome_target_locations_Jon31.bed"
+parent_dir <- "/Users/jon/zon/clonal_hematopoiesis/sequencing_analysis/213385r_2020_12_30"
+genome_file_path <- "/Users/jon/zon/clonal_hematopoiesis/Jon-33/Jon-33.fa"
+genome_target_file_path <- "/Users/jon/zon/clonal_hematopoiesis/Jon-33/R_custom_genome_target_locations_Jon33.bed"
 
 # Function definition
 run_crispr_variants <- function(batch_path_name, genome_file_path, genome_target_file_path){
@@ -10,12 +10,11 @@ run_crispr_variants <- function(batch_path_name, genome_file_path, genome_target
   
   #Import BED file information of CRISPR target sites
   gd_fname <- genome_target_file_path
-  gd_fname <- 
   gd <- rtracklayer::import(gd_fname)
   gdl <- GenomicRanges::resize(gd, width(gd) + 10, fix = "center") #add 5 bp to each side for visualization
   
   #Get reference sequences for each gene
-  genome_seq <- readDNAStringSet(genome_file)
+  genome_seq <- readDNAStringSet(genome_file_path)
   reference <- BSgenome::getSeq(genome_seq,gdl)
   
   #Load metadata table

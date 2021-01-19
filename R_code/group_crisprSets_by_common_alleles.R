@@ -1,5 +1,5 @@
 ## Paths to define
-parent_dir <- '/Users/jon/zon/clonal_hematopoiesis/204590r_2019_11_20/crispr_sets'
+parent_dir <- '/Users/jon/zon/clonal_hematopoiesis/210534r_2020_09_16/crispr_sets'
 
 # Function definition
 group_crispr_sets_by_common_alleles <- function(batch_path_name){
@@ -200,7 +200,7 @@ if(length(dir_list) == 0){
 }
 
 for(f in c(1:length(dir_list))){
-  group_crispr_sets_by_common_alleles(dir_list[[f]], include_long_graphs=include_long_graphs, time_points=time_points, my_order=order)
+  group_crispr_sets_by_common_alleles(dir_list[[f]])
 }
 
 print('----------------------------------------------------')
